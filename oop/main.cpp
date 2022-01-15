@@ -7,7 +7,7 @@ int main()
     Cat cat;
     Dog dog;
 
-    cat.eat();
+    cat.Animal::eat();
     dog.eat();
     
     return 0;

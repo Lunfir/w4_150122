@@ -8,4 +8,5 @@ public:
     Dog();
     ~Dog();
 
+    void eat();
 };
