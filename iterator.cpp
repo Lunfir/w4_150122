@@ -1,11 +1,15 @@
 #include <iostream>
 #include <array>
+#include <vector>
+#include <set>
 
+template<typename Container>
 class Iterator
 {
 public:
-    Iterator(std::array<int, 7>* inArray)
+    Iterator(Container* inArray)
     {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
         array = inArray;
         currentIndex = 0;
     }
@@ -47,20 +51,23 @@ public:
     }
 
 private:
-    Iterator(std::array<int, 7>* inArray, int inIndex)
+    Iterator(Container* inArray, int inIndex)
     {
         array = inArray;
         currentIndex = inIndex;
     }
-    
-    std::array<int, 7>* array;
+
+    Container* array;
     int currentIndex;
 };
 
 int main()
 {
     std::array<int, 7> array = { 2, 12, 23, 34, 12, 21, 45 };
-    Iterator iter(&array);
+    Iterator<std::array<int, 7>> iter(&array);
+
+    // std::vector<int> vector = { 2, 12, 23, 34, 12, 21, 45 };
+    // Iterator<std::vector<int>> iter(&vector);
 
     for ( ; iter != iter.end(); ++iter)
     {
