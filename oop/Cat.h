@@ -6,15 +6,7 @@ class Cat : public Animal
 {
 public:
     Cat();
-    ~Cat();
+    ~Cat() override;
 
-    void eat();
-
-    void testModificators();
-
-// protected:
-//     void protectedMethod();
-
-// private:
-//     void privateMethod();
+    void eat() override;
 };

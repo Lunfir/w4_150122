@@ -2,15 +2,28 @@
 #include "Cat.h"
 #include "Dog.h"
 
+
 int main()
 {
-    Cat cat;
-    Dog dog;
+    Animal* zoo[2];
 
-    cat.testModificators();
+    Animal* cat = new Cat();
+    Animal* dog = new Dog();
 
-    // cat.Animal::eat();
-    // dog.eat();
-    
+    zoo[0] = cat;
+    zoo[1] = dog;
+
+    // feed
+    for (int i = 0; i < 2; i++)
+    {
+        zoo[i]->eat();
+    }
+
+    // destroy
+    for (int i = 0; i < 2; i++)
+    {
+        delete zoo[i];
+    }
+
     return 0;
 }

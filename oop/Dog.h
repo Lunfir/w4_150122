@@ -8,5 +8,5 @@ public:
     Dog();
     ~Dog();
 
-    void eat();
+    void eat() override;
 };

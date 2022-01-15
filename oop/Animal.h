@@ -5,13 +5,7 @@ class Animal
 {
 public:
     Animal();
-    ~Animal();
+    virtual ~Animal();
 
-    void eat();
-
-protected:
-    void protectedMethod();
-
-private:
-    void privateMethod();
+    virtual void eat();
 };
