@@ -9,4 +9,12 @@ public:
     ~Cat();
 
     void eat();
+
+    void testModificators();
+
+// protected:
+//     void protectedMethod();
+
+// private:
+//     void privateMethod();
 };

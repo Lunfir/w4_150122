@@ -7,8 +7,10 @@ int main()
     Cat cat;
     Dog dog;
 
-    cat.Animal::eat();
-    dog.eat();
+    cat.testModificators();
+
+    // cat.Animal::eat();
+    // dog.eat();
     
     return 0;
 }

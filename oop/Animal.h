@@ -9,4 +9,9 @@ public:
 
     void eat();
 
+protected:
+    void protectedMethod();
+
+private:
+    void privateMethod();
 };
