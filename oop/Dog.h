@@ -2,11 +2,11 @@
 #include <iostream>
 #include "Animal.h"
 
-class Dog : virtual public Animal
+class Dog : public Animal
 {
 public:
     Dog();
     ~Dog();
 
-    // void eat();
+    void eat() override;
 };

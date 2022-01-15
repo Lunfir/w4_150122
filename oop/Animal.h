@@ -7,5 +7,5 @@ public:
     Animal();
     virtual ~Animal();
 
-    void eat();
+    virtual void eat();
 };
