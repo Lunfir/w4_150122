@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 class Animal
@@ -5,5 +6,7 @@ class Animal
 public:
     Animal();
     ~Animal();
+
+    void eat();
 
 };

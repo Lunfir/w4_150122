@@ -1,8 +1,14 @@
-all: animal main
-	g++ Animal.o main.o -o main.exe
+all: animal cat dog main
+	g++ *.o -o main.exe
 
 animal: Animal.cpp
 	g++ -c Animal.cpp -o Animal.o
+
+cat: Cat.cpp
+	g++ -c Cat.cpp -o Cat.o
+
+dog: Dog.cpp
+	g++ -c Dog.cpp -o Dog.o
 
 main: main.cpp
 	g++ -c main.cpp -o main.o

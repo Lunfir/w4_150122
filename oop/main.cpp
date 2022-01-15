@@ -1,9 +1,14 @@
 #include <iostream>
-#include "Animal.h"
+#include "Cat.h"
+#include "Dog.h"
 
 int main()
 {
-    Animal animal;
+    Cat cat;
+    Dog dog;
+
+    cat.eat();
+    dog.eat();
     
     return 0;
 }
