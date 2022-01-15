@@ -61,6 +61,7 @@ private:
     int currentIndex;
 };
 
+
 int main()
 {
     std::array<int, 7> array = { 2, 12, 23, 34, 12, 21, 45 };
@@ -76,3 +77,51 @@ int main()
 
     return 0;
 }
+
+// homework hints
+// class AriProgIterator
+// {
+// public:
+//     AriProgIterator(inStart, inStep, inLimit)
+//     {
+//         currentIndex = 0;
+//         start = inStart;
+//         step = inStep;
+//         current = start;
+//     }
+
+//     ~AriProgIterator();
+
+//     operator++();
+//     next()
+//     {
+//         currentIndex += 1;
+//         current += step;
+//     }
+
+//     end()
+//     {
+//         currentIndex == limit;
+//     }
+
+//     begin();
+
+//     current()
+//     {
+//         return current;
+//     }
+
+// private:
+//     int start;
+//     int step;
+//     int limit; // elements amount
+
+//     int current;
+//     int currentIndex;
+// };
+
+// AriProgIterator(inStart, inStep, inLimit);
+// for ( ; iter != iter.end(); ++iter)
+// {
+//     std::cout << iter.current() << std::endl;
+// }
