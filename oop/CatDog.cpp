@@ -1,16 +1,17 @@
-#include "Dog.h"
+#include "CatDog.h"
 
-Dog::Dog()
+CatDog::CatDog()
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
-Dog::~Dog()
+CatDog::~CatDog()
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
-// void Dog::eat()
+
+// void CatDog::eat()
 // {
 //     std::cout << __PRETTY_FUNCTION__ << std::endl;
 // }
