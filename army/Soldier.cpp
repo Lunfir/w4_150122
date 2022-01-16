@@ -5,34 +5,47 @@ Soldier::Soldier(std::string inName, int inHp, int inPDamage)
     this->m_hp = inHp;
     this->m_pDamage = inPDamage;
     this->m_name = inName;
+    this->m_state = new HumanState(this);
 }
 
 Soldier::~Soldier()
 {
+    delete m_state;
+}
 
+void Soldier::switchState(State* inNewState)
+{
+    State* tmpPointer = m_state;
+
+    m_state = inNewState;
+    m_state->setMasterUnit(this);
+
+    delete tmpPointer;
 }
 
 void Soldier::pAttack(Unit* inEnemy)
 {
-
+    m_state->pAttack(inEnemy);
 }
 
 void Soldier::takeAttack(Unit* inEnemy)
 {
-
+    m_state->takeAttack(inEnemy);
 }
 
 void Soldier::counterAttack(Unit* inEnemy)
 {
+    m_state->counterAttack(inEnemy);
+}
 
+void Soldier::takeCounterAttack(Unit* inEnemy)
+{
+    m_state->takeCounterAttack(inEnemy);
 }
 
 void Soldier::print()
 {
-    std::cout << "======================" << std::endl;
-    std::cout   << "name:    " << this->m_name << "\n"
-                << "hp:      " << this->m_hp << "\n"
-                << "pDamage: " << this->m_pDamage << std::endl;
+    m_state->print();
 }
 
 int Soldier::getHp() const
@@ -58,6 +71,11 @@ void Soldier::setPhysDamage(int inDamage)
 const std::string& Soldier::getName() const
 {
     return this->m_name;
+}
+
+State* Soldier::getState() const
+{
+    return m_state;
 }
 
 void Soldier::setName(std::string inName)
